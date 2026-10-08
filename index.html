@@ -81,6 +81,18 @@
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   @media (max-width:860px){.grid3{grid-template-columns:1fr;} .hero{flex-direction:column;} .hero-copy{order:2;} .hero-logo{order:1;margin:0 auto;}}
 
+  .grid-resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .resource-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:10px;
+    transition:border-color .15s;text-decoration:none;
+  }
+  .resource-card:hover{border-color:var(--blue-bright);}
+  .resource-card .res-icon{font-size:22px;}
+  .resource-card h3{margin:0;font-size:17px;color:var(--white);}
+  .resource-card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5;}
+  .resource-card .res-link{color:var(--blue-bright);font-size:13px;font-weight:700;margin-top:auto;}
+
   .card{
     background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
     padding:24px;display:flex;flex-direction:column;gap:12px;
@@ -149,6 +161,7 @@
     </div>
     <nav>
       <ul>
+        <li><a href="#resources">Resources</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#why">Why Trust Us</a></li>
         <li><a href="#signup">Newsletter</a></li>
@@ -184,6 +197,45 @@
   <div class="placeholder-note">
     <strong>Starter template:</strong> this page is a launch-ready structure with sample content and your real logo embedded. Swap the copy, review scores, and affiliate links for your own before publishing — see the business plan and content calendar for what to fill in first.
   </div>
+
+  <section id="resources">
+    <div class="section-label">CyberWolf Resources</div>
+    <h2>Free knowledge. Practical tools. Smarter decisions.</h2>
+    <p class="lead">Before we recommend anything, we teach the fundamentals — so you can make an informed call, not just a purchase.</p>
+
+    <div class="grid-resources">
+      <a class="resource-card" href="resources/starter-kit.html">
+        <div class="res-icon">🛡️</div>
+        <h3>Cybersecurity Starter Kit</h3>
+        <p>Learn the fundamentals of protecting yourself online.</p>
+        <span class="res-link">Get the kit →</span>
+      </a>
+      <a class="resource-card" href="resources/ai-toolkit.html">
+        <div class="res-icon">🤖</div>
+        <h3>AI Productivity Toolkit</h3>
+        <p>Discover tools that can help you work smarter.</p>
+        <span class="res-link">Explore the toolkit →</span>
+      </a>
+      <a class="resource-card" href="resources/certification-roadmap.html">
+        <div class="res-icon">🎓</div>
+        <h3>Cybersecurity Certification Roadmap</h3>
+        <p>Find the right certification path for your career.</p>
+        <span class="res-link">See the roadmap →</span>
+      </a>
+      <a class="resource-card" href="resources/remote-worker-guide.html">
+        <div class="res-icon">💻</div>
+        <h3>Remote Worker Security Guide</h3>
+        <p>Protect your devices, accounts and information while working remotely.</p>
+        <span class="res-link">Read the guide →</span>
+      </a>
+      <a class="resource-card" href="resources/buyers-guide.html">
+        <div class="res-icon">🧭</div>
+        <h3>Technology Buyer's Guide</h3>
+        <p>Understand what you're actually paying for before you buy.</p>
+        <span class="res-link">Read the guide →</span>
+      </a>
+    </div>
+  </section>
 
   <section id="reviews">
     <div class="section-label">Top Picks</div>
